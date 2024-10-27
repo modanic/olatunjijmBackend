@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+      Olatunji J Makinde & CO LTD- Architects|Engineers|Project Managers
+    </title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="icon" type="image/png" href="./assets/faveIcon.PNG">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="top-conner" class="body-container">
+        <header>
+          <a href="./index.html" class="continer-logo">
+
+              <div class="con-logo">
+
+                  <img src="./assets/faveIcon.PNG" alt="Olatunji Logo" />
+              </div>
+              <div class="con-logo-info">
+                  <h2>
+                    OLATUNJI J MAKINDE & CO
+                  </h2>
+                  <p>
+                    Engineering Designs & Construction
+                  </p>
+              </div>
+
+          </a>
+          <nav class="responsive-nav">
+
+            <ol>
+
+                <li>
+                  <a href="./equipment-rental.html">
+                    Equipment Rental
+                  </a>
+                </li>
+                <li>
+                  <a href="./concrete-products.html">
+                    Concrete Products
+                  </a>
+                </li>
+                <li>
+                  <a href="./sales-supply.html">
+                    Sales & Supply
+                  </a>
+                </li>
+                <li>
+                  <a href="./gallery.html">
+                    Gallary
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" onclick="onHandleClickLogout()">
+                    Logout
+                  </a>
+                </li>
+
+            </ol>
+
+          </nav>
+          <div onclick="handelClickDisplayResponsiveMenue()" id="nav-span-con" class="nav-span-cotainer">
+            <div class="span-container">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </header>
+
+        <section class="section-equp-rent">
+
+            <div class="section-equp-rent-container">
+
+              <div
+                  id="sec-equp-rent-bod"
+                  class="section-equp-rent-body"
+              >
+
+                <div class="container-card-image-info"
+                >
+                  <img src="./assets/Coldroom.jpg" alt="Cold Room Image" class="container-card-image" />
+                  <div class="container-card-info">
+
+                    <h4>
+                      Cold Room
+                    </h4>
+
+                    <div class="container-card-info-btn">
+                      <button
+                        onclick="handleClickOpenBackgroung('001')"
+                        type="button"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onclick="handelDeleteImage('001')"
+                        type="button"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div
+                class="uploadButton"
+                onclick="handleClickOpenBackgroungUpload()"
+              >
+                <h1>UPLOAD</h1>
+              </div>
+
+            </div>
+
+        </section>
+
+    </div>
+    <!-- fixed topcorner scrolling -->
+
+    <div id="back-sec-scr" class="background-section-screen">
+
+      <div class="background-section-screen-container">
+
+        <div
+          id="back-remove"
+          class="background-remover"
+          onclick="handleClickCloseBackgroung()"
+        >
+        </div>
+
+        <div
+          id="back-ground-update-upload-con"
+          class="backgroung-update-upload-content"
+        >
+
+            <div id="back-update-con" class="background-update-container">
+
+              <div id="update-con-img-inp" class="update-container-img-input">
+
+                <div
+                  class="update-container-img up-con-img-update"
+                  id="update-con-img"
+                >
+
+                  <div class="update-contain-img-body">
+                    <img id="up-con-img" src="./assets/Coldroom.jpg" alt="Cold Room" />
+                    <div
+                      class="update-contain-img-info"
+                      id="update-con-img-info"
+                    >
+                      <h2>
+                        Name of Image can be very long and not short so set the information.
+                      </h2>
+                    </div>
+
+                  </div>
+                  <button
+                    class="update-bttn"
+                    type="button"
+                    name="button"
+                    onclick="handlehiddeImg('update')"
+                  >
+                    Edit
+                  </button>
+
+                </div>
+                <form enctype="multipart/form-data"
+                  id="update-con-inp"
+                  class="update-container-input up-con-img-update"
+                >
+
+                    <div class="update-contain-img-body">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        id="updateImg"
+                        onchange="handelImageUpdateChange(event, 'update')"
+                      />
+                    </div>
+                    <div class="update-contain-img-info">
+                      <input
+                        type="text"
+                        id="imgInfo"
+                        placeholder="Name Image"
+                        oninput="handleChangeImageName(event, 'update')"
+                       />
+                    </div>
+
+                    <button
+                      class="update-bttn"
+                      type="button"
+                      name="button"
+                      onclick="handelUpdateEvent('001')"
+                    >
+                      Update
+                    </button>
+                    <button
+                      class="preview-bttn"
+                      type="button"
+                      name="button"
+                      onclick="handelDisplayImg('update')"
+                    >
+                      Preview
+                    </button>
+
+                </form>
+
+
+              </div>
+
+
+            </div>
+
+            <div id="back-upload-con" class="background-upload-container">
+
+              <div class="upload-container-img-input">
+
+                <div id="upload-con-img" class="update-container-img up-con-img-update" >
+
+                  <div class="update-contain-img-body">
+                    <img id="uplo-con-img" src="" alt="Cold Room" />
+                    <div
+                      class="update-contain-img-info"
+                      id="upload-con-img-info"
+                    >
+                      <h2>
+                        <!-- Name of Image can be very long and not short so set the information. -->
+                      </h2>
+                    </div>
+                    <!-- <div
+                      class="cancle-img-update"
+                      onclick="handlehiddeImg()"
+                    >
+
+                      <i class="fas fa-arrow-right" style="font-size: 48px; color: black;"></i>
+
+                    </div> -->
+
+                  </div>
+                  <button
+                    class="update-bttn"
+                    type="button"
+                    name="button"
+                    onclick="handlehiddeImg('upload')"
+                  >
+                    Edit
+                  </button>
+
+                </div>
+                <form enctype="multipart/form-data" id="upload-con-inp" class="update-container-input up-con-img-update">
+
+                    <div class="update-contain-img-body">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        id="uploadImg"
+                        onchange="handelImageUpdateChange(event, 'upload')"
+                      />
+                    </div>
+                    <div class="update-contain-img-info">
+                      <input
+                        type="text"
+                        id="imgInfoUpload"
+                        placeholder="Name Image"
+                        oninput="handleChangeImageName(event, 'upload')"
+                       />
+                    </div>
+
+                    <button
+                      class="update-bttn"
+                      type="button"
+                      name="button"
+                      onclick="handelUploadEvent()"
+                    >
+                      Upload
+                    </button>
+                    <button
+                      class="preview-bttn"
+                      type="button"
+                      name="button"
+                      onclick="handelDisplayImg('upload')"
+                    >
+                      Preview
+                    </button>
+
+                </form>
+
+
+              </div>
+
+
+            </div>
+
+        </div>
+        <div
+          id="load-screen-err"
+          class="loading-error-screen"
+        >
+
+          <div
+            class="loading-screen"
+            id="load-screen"
+          >
+            <div class="load-img load-img-info">
+              <img src="./assets/faveIcon.PNG" alt="image company" />
+            </div>
+            <div class="load-info load-img-info">
+              <h2>
+                Loading....
+              </h2>
+            </div>
+          </div>
+
+          <div
+            id="err-screen"
+            class="error-screen"
+          >
+
+            <div class="error-heading load-img-info">
+              <h2>
+                ERROR
+              </h2>
+            </div>
+            <div
+              class="error-info load-img-info"
+              id="err-load-info"
+            >
+              <h4>
+                Invalide Image Size
+              </h4>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div id="res-nav-cov-con" class="responsive-nav-cover-container">
+      <div onclick="handelClickHiddeResponsiveMenue()" id="nav-span-con-close" class="nav-span-cotainer-close">
+        <div class="span-container">
+
+          <i class="fas fa-times" style="font-size: 48px; color: red;"></i>
+
+
+        </div>
+      </div>
+      <ol>
+          <li>
+            <a href="./equipment-rental.html">
+              Equipment Rental
+            </a>
+          </li>
+          <li>
+            <a href="./concrete-products.html">
+              Concrete Products
+            </a>
+          </li>
+          <li>
+            <a href="./sales-supply.html">
+              Sales & Supply
+            </a>
+          </li>
+          <li>
+            <a href="./gallery.html">
+              Gallary
+            </a>
+          </li>
+
+          <li>
+            <a href="#" onclick="onHandleClickLogout()">
+              Logout
+            </a>
+          </li>
+      </ol>
+    </div>
+
+    <script src="./index.js">
+
+    </script>
+
+    <script>
+      let getUserinfo = localStorage.getItem("adminDate")
+      // let jsonGetUserInfo = JSON.parse(getUserinfo)
+      // !getUserinfo
+      console.log(getUserinfo)
+      if (!getUserinfo) {
+        window.location.replace("./index.html")
+      }
+      displayEquipments()
+
+    </script>
+
+  </body>
+</html>
